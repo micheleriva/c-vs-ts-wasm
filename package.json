@@ -1,0 +1,12 @@
+{
+  "name": "c-vs-ts-wasm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "asbuild": "asc -O src/ts/main.ts -b build/optimized.wasm -t build/optimized.wat --validate --measure"
+  },
+  "devDependencies": {
+    "assemblyscript": "AssemblyScript/assemblyscript"
+  }
+}
