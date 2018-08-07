@@ -10,6 +10,7 @@ task('init', { async: true }, () => {
 })
 
 task('compile-c', () => {
+  jake.exec(`cd ./src/c && gcc main.c -S`)
   jake.exec(`cd ./src/c && emcc main.c -s WASM=1`)
 })
 

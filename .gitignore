@@ -1,4 +1,5 @@
 src/c/a.out.js
+src/c/a.out
 node_modules
 yarn.lock
 .DS_Store

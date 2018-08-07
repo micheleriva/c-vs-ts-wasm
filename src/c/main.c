@@ -1,22 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int fib(int n) {
-  int a = 0, b = 1, c, i;
-
-  if( n == 0)
-    return a;
-
-  for (i = 2; i <= n; i++){
-     c = a + b;
-     a = b;
-     b = c;
-  }
-  return b;
+int fibonacci(int i) {
+  if (i < 0) return -1;
+  if (i == 0) return 0;
+  else if (i == 1) return 1;
+  else return fibonacci(i-1) + fibonacci(i-2);
 }
- 
-int main(){
-  int n = 9;
-  printf("%d", fib(n));
-  getchar();
+
+int main(void) {
+  int n = 100;
+  int result = fibonacci(n);
+	printf("%d", result);
   return 0;
 }
