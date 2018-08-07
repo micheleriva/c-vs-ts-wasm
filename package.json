@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "asbuild": "asc -O src/ts/main.ts -b build/optimized.wasm -t build/optimized.wat --validate --measure"
+    "asbuild": "asc -O src/ts/main.ts -b src/ts/a.out.wasm -t src/ts/a.out.wat --validate --measure"
   },
   "devDependencies": {
     "assemblyscript": "AssemblyScript/assemblyscript"
