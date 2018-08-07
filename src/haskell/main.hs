@@ -10,4 +10,4 @@ fib n = go 0 1 0
 foreign import ccall unsafe "print_int" print_int :: Int -> IO ()
 
 main :: IO ()
-main = print_int $ fib 10
+main = print_int $ fib 100

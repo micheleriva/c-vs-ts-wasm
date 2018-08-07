@@ -2,6 +2,19 @@
 
 Simple repo I made for myself just to test some WebAssembly compilers.
 
+# Tested compilers
+
+- **C Language**
+  - gcc
+  - emcc
+
+- **TypeScript**
+  - assemblyscript
+
+- **Haskell (wip)**
+  - ghc
+  - asterius
+
 # Installation
 
 ```sh
