@@ -1,4 +1,4 @@
-function fibonacci(i: number): number {
+function fibonacci(i: i32): i32 {
   if (i < 0)
     return -1
   else if (i === 0)
@@ -9,5 +9,5 @@ function fibonacci(i: number): number {
     return fibonacci(i-1) + fibonacci(i-2)
 }
 
-const n: number = 100
-const result: number = fibonacci(n)
+const n: i32 = 100
+const result: i32 = fibonacci(n)

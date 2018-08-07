@@ -1,51 +1,48 @@
 (module
- (type $FF (func (param f64) (result f64)))
+ (type $ii (func (param i32) (result i32)))
  (type $v (func))
- (global $src/ts/main/result (mut f64) (f64.const 0))
+ (global $src/ts/main/result (mut i32) (i32.const 0))
  (memory $0 0)
  (export "memory" (memory $0))
  (start $start)
- (func $src/ts/main/fibonacci (; 0 ;) (; has Stack IR ;) (type $FF) (param $0 f64) (result f64)
-  (if (result f64)
-   (f64.lt
+ (func $src/ts/main/fibonacci (; 0 ;) (; has Stack IR ;) (type $ii) (param $0 i32) (result i32)
+  (if (result i32)
+   (i32.lt_s
     (get_local $0)
-    (f64.const 0)
+    (i32.const 0)
    )
-   (f64.const -1)
-   (if (result f64)
-    (f64.eq
-     (get_local $0)
-     (f64.const 0)
-    )
-    (f64.const 0)
-    (if (result f64)
-     (f64.eq
+   (i32.const -1)
+   (if (result i32)
+    (get_local $0)
+    (if (result i32)
+     (i32.eq
       (get_local $0)
-      (f64.const 1)
+      (i32.const 1)
      )
-     (f64.const 1)
-     (f64.add
+     (i32.const 1)
+     (i32.add
       (call $src/ts/main/fibonacci
-       (f64.sub
+       (i32.sub
         (get_local $0)
-        (f64.const 1)
+        (i32.const 1)
        )
       )
       (call $src/ts/main/fibonacci
-       (f64.sub
+       (i32.sub
         (get_local $0)
-        (f64.const 2)
+        (i32.const 2)
        )
       )
      )
     )
+    (i32.const 0)
    )
   )
  )
  (func $start (; 1 ;) (; has Stack IR ;) (type $v)
   (set_global $src/ts/main/result
    (call $src/ts/main/fibonacci
-    (f64.const 100)
+    (i32.const 100)
    )
   )
  )
