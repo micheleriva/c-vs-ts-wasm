@@ -1,20 +1,17 @@
-function fibonacci(count:number): string {
+function fibonacci(i: number): number {
+  
+  if (i < 0)
+    return -1
 
-	let first: number     = 0;
-	let second: number    = 1;
-	let sum: number       = 0;
-	let fibSeqStr: string = "";
-	
-	fibSeqStr = first.toString() + " " + second.toString() + " ";
-	
-	for (var index = 0; index < count; index++) {
-		sum = first + second;
-		first = second;
-		second = sum;
-		fibSeqStr += sum.toString() + " ";
-	}
-	
-	return fibSeqStr;
+  else if (i === 0)
+    return 0
+
+  else if (i === 1)
+    return 1
+
+  else
+    return fibonacci(i-1) + fibonacci(i-2)
 }
 
-let a: string = fibonacci(9)
+const n: number = 100
+const result: number = fibonacci(n)
